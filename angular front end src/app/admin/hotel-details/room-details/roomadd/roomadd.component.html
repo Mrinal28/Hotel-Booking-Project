@@ -1,0 +1,22 @@
+<H1>Add a new Room!</H1>
+
+<div class="container">
+
+    <fieldset class="form-group">
+        <label>Room Size</label>
+        <input type="text" [(ngModel)]="rsize" class="form-control" name="location" required="required">
+      </fieldset>
+
+      <fieldset class="form-group">
+        <label>Room Price</label>
+        <input type="text"  [(ngModel)]="rprice" class="form-control" name="rating" required="required">
+      </fieldset>
+
+      <fieldset class="form-group">
+        <label>Room Image</label>
+        <input type="text"  [(ngModel)]="rimage" class="form-control" name="image" required="required">
+      </fieldset>
+
+
+    <button class="btn btn-success" (click)="saveRoom()" >Save</button>  
+</div>

@@ -1,0 +1,181 @@
+
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+
+
+.background{
+  background: url(https://cdn.pixabay.com/photo/2015/04/20/13/38/furniture-731449_960_720.jpg);
+ 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;  
+  overflow:hidden;
+  padding-bottom:400px;
+}
+.header h1{
+font-size:100px;
+padding-top: 130px;
+}
+
+.header h3{
+ font-size:28px;
+  padding-top:50px;
+}
+
+.search{
+  text-align: right;
+  top: 0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 50px;
+}
+input{
+  width: 20%;
+  height: 50px;
+  border: 2px, black;
+  background-color: #cceeff;
+  font-size: 20px;
+  padding-left: 10px;
+  color: black;
+}
+.searchButton {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #66ccff;
+  background: #80d4ff;
+  text-align: center;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.header{
+  position:relative;
+	text-align:center;
+	color:white; 
+  font-family: 'Montserrat', sans-serif;
+}
+
+.grid {
+	width:100%;
+	display:flex;
+	flex-wrap:wrap;
+  list-style: none;
+}
+.destinations{
+ 	width:100%;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center; 
+}
+
+.destinations .grid li { 
+	height:400px;
+	padding:10px;
+	background-clip:content-box;
+	background-size:cover;  
+  background-position: center;
+}
+
+.destinations .grid li.large {
+	flex-basis:60%; 
+  
+}
+
+.destinations .grid li.small {
+	flex-basis:40%;
+}
+.grid{
+  padding-bottom: 50px;
+}
+
+.mid{
+  padding-top:30px;
+}
+.mid h3{
+	font-size: 32px;
+	margin-bottom:30px;
+	text-align:center;
+  font-family: 'Montserrat', sans-serif;
+}
+.mid p{
+  text-align: justify;
+  margin: 0 auto;
+  max-width: 800px;
+  padding-bottom:30px;
+  line-height: 2;
+  font-family: 'Montserrat', sans-serif;
+}
+.contact{
+  background-color:#cceeff;
+  padding-bottom: 30px;
+  padding-top: 10px;
+}
+.contact-header{
+  text-align: center;
+  padding-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-links{
+  text-align: center;
+  padding-top: 20px;
+}
+
+.link{
+  padding: 20px;
+  color: black;
+}
+.link:hover{
+  color: grey;
+}
+  
+@media screen and (max-width: 900px) {
+  .header h1{
+font-size:70px;
+padding-top: 70px;
+}
+ .header h3{
+   font-size: 20px;
+   padding-top:30px;
+  }
+  .background{
+  padding-bottom:100px;
+}
+  .mid p{
+    padding-right:10px;
+    padding-left:10px;
+  }
+ input{
+  width: 60%;
+  font-size: 15px;
+  }
+.destinations .grid li {
+  margin-top: 0;
+	height:200px;
+	padding:2px;
+}
+  .grid{
+    padding-bottom: 20px;
+  }
+  
+  .contact-header{
+  padding: 5px;
+  font-size: 15px;
+}
+  .contact-links{
+  padding: 0;
+  font-size: 7px;
+}
+  .contact{
+    padding-bottom:100px;
+  }
+}
+

@@ -1,0 +1,17 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div><a href=# class="navbar-brand">Hotel Booking</a></div>
+
+        <ul class="navbar-nav">
+            <li><a routerLink="/home" class="nav-link">Home</a></li>
+            <li><a routerLink="/browse" class="nav-link">Browse Hotels</a></li>
+        </ul>
+
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li><a routerLink="/login" *ngIf="checkloc()" class="nav-link">Login</a></li>
+            <li><a routerLink="/myaccount" class="nav-link" *ngIf="!checkloc()">My Account</a></li>
+            <li><a  routerLink="/home" class="nav-link" *ngIf="!checkloc()" (click)="logout()">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+

@@ -1,0 +1,32 @@
+<div>
+    <h3>Room Details of the Hotel</h3><br>
+    <div class="alert alert-success" *ngIf='message'>{{message}}</div>
+    <div class="container">
+      <table class="table">
+          <thead>
+              <tr>
+              <th>Room Id</th>
+              <th>Room Size</th>
+              <th>Room Price</th>
+              <th>Update</th>
+              <th>Delete</th>   
+          </tr>
+          </thead>
+          <tbody >
+          <tr *ngFor="let hotel of response">
+              <td>{{hotel.rid}}</td>
+              <td>{{hotel.rsize}}</td>
+              <td>{{hotel.rprice}}</td>
+              <td><button (click)="updateHotel(hotel.hid)" class="btn btn-success">Update</button></td>
+              <td><button (click)="deleteHotel(hotel.rid)" class="btn btn-warning">Delete</button></td>
+              
+              </tr>
+          </tbody>
+      </table>
+
+     <div class="row">
+          <button (click)="addHotel()" class="btn btn-success">Add Room</button>
+      </div>
+  
+  </div>
+  </div>

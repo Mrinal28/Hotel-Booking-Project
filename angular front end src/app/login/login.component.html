@@ -1,0 +1,12 @@
+<div class="login-page">
+    <div class="form">
+        <p>login now</p>
+      <form class="login-form" (ngSubmit)="!Form.invalid && searchForUser(username)" #Form="ngForm">
+        <input type="text" placeholder="cid" [(ngModel)]="username" name="username"/>
+        <input type="password" placeholder="password" [(ngModel)]="password" name="password"/>
+        <button type="submit">login</button>
+        <div (active)="searchForUser(username)"></div>
+        <p class="message">Not registered? <a href="/register">Create an account</a></p>
+      </form>
+    </div>
+  </div>

@@ -1,0 +1,24 @@
+<div class="alert alert-warning" *ngIf="Form.dirty && Form.invalid">Enter valid values</div>
+<div class="alert alert-warning" *ngIf="Form.dirty && usern.invalid">Enter valid Username, minimum 5 characters</div>
+<div class="alert alert-warning" *ngIf="Form.dirty && usern.invalid">Enter valid password, minimum 5 characters</div>
+<div class="alert alert-warning" *ngIf="Form.dirty && usern.invalid">Enter valid email, minimum 5 characters</div>
+<div class="alert alert-warning" *ngIf="Form.dirty && usern.invalid">Enter valid Phone number</div>
+
+<div class="login-page">
+    <div class="form">
+        <p>register now</p>
+      <form class="login-form" (ngSubmit)="!Form.invalid && handleLogin()" #Form="ngForm">
+        <input type="text" placeholder="name" #usern="ngModel" [(ngModel)]="username" name="name" required="required" minlength="5" />
+        <input type="password" placeholder="password" #pswd="ngModel"[(ngModel)]="password" name="password" required="required" minlength="5"/>
+        <input type="email" placeholder="email" #em="ngModel" [(ngModel)]="email"name="email" required="required" minlength="5"/>
+        <input type="phoneno" placeholder="phoneno" #pno="ngModel" [(ngModel)]="phoneno"name="phoneno" required="required" minlength="10" maxlength="10"/>
+        <button type="submit">Register</button>
+        <p class="message">Registered? <a href="/login">Login to Account</a></p>
+      </form>
+    </div>
+  </div> 
+
+
+  
+
+ 

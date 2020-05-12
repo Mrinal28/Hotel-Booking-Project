@@ -1,0 +1,28 @@
+<div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- card1 -->
+  <div class="card card float-left mr-4 mb-4" style="width: 20rem;" *ngFor="let hotel of response">
+    <div class="card-body">
+      <h5 class="card-title">{{hotel.hname}}</h5>
+      <div class="view overlay">
+        <img class="card-img-top" src="{{hotel.himage}}" width="100px" height="150px" alt="Image">
+        <a href="#">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{hotel.hname}}</li>
+      <li class="list-group-item">{{hotel.hlocation}}</li>
+      <ul class="list-unstyled list-inline rating ml-3">
+        <li class="list-inline-item">
+          <p class="text-muted">{{hotel.hrating}}</p>
+        </li>
+        <li class="fa fa-star checked"></li>
+      </ul>
+    </ul>
+    <div class="card-body">
+      <a class="btn btn-info" href="/rooms/{{hotel.hid}}">Browse Rooms</a>
+    </div>
+  </div>
+</div>

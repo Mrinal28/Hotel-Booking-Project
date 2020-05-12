@@ -1,0 +1,37 @@
+<h3>Booking confirmation for Room {{response.rid}}</h3>
+<br>
+<div class="row">
+    <div class="col-5">
+        <div class="container">
+            <fieldset class="form-group">
+                <label>Enter the Number of Guests</label>
+                <input type="text" [(ngModel)]="noguests" class="form-control" name="name" required="required">
+            </fieldset>
+
+            <fieldset class="form-group">
+                <label>Enter Start Date of stay</label>
+                <input type="date" [(ngModel)]="startdate" min="2020-05-12" class="form-control" name="location" required="required">
+            </fieldset>
+
+            <fieldset class="form-group">
+                <label>Enter total days of stay</label>
+                <input type="text" [(ngModel)]="enddate" class="form-control" name="rating" required="required">
+            </fieldset>
+
+            <fieldset class="form-group">
+                <label>Enter amount on right to confirm</label>
+                <input type="text" [(ngModel)]="totals" class="form-control" name="rating" required="required">
+            </fieldset>
+           
+        </div>
+    </div>
+    <div class="col col-3">
+    </div>
+    <div class="col col-4">
+        <br><br>
+        <p> Total guests : {{noguests}}</p>
+        <p>Total days of stay: {{enddate}}</p>
+        <p [ngModel]="total">Your Total is : {{ noguests * enddate * response.rprice}}</p>
+    </div>
+</div>
+<button class="btn btn-success" (click)="paymentconfirm()">Complete Booking</button>

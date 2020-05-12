@@ -1,0 +1,33 @@
+<!-- -------------------------------------- -->
+<!-- <h3>You are Browsing the rooms section now</h3><br> -->
+<!-- Card -->
+<div class="card card-cascade wider reverse mb-4" style="width: 60rem;" *ngFor="let room of response">
+    <div class="view view-cascade overlay">
+      <img class="card-img-top" src="{{room.rimage}}" width="200px" height="500px">
+      <a href="#!">
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+    <div class="card-body card-body-cascade text-center">
+  
+      <!-- Title -->
+      <h4 class="card-title"><strong>Room {{room.rid}}</strong></h4>
+      <!-- Subtitle -->
+      <h6 class="font-weight-bold indigo-text py-2">{{room.rsize}}</h6>
+      <!-- Text -->
+        <div class="card-text">
+            Beautiful {{room.rsize}} room to spend your night, breakfast included.         
+        Book this {{room.rsize}} for a low price of Rs. {{room.rprice}}
+          per night.
+        </div>
+        <div class="card-body">
+          <a class="btn btn-info" *ngIf="checkloc()"></a>
+            <a class="btn btn-info" (click)="dobook()">Book this room</a>
+            <!-- <a class="btn btn-info" *ngIf="checkloc()" (click)="dobook()">Book this room</a> -->
+          </div>
+
+  
+    </div>
+  
+  </div>
+  <!-- Card -->
